@@ -1,6 +1,3 @@
-import java.util.Random;
-Random generator;
-
 class Walker {
   int x;
   int y;
@@ -8,7 +5,6 @@ class Walker {
   Walker() {
     x = width/2;
     y = height/2;
-    generator = new Random();
   }
   
   void display() {
@@ -18,7 +14,6 @@ class Walker {
   
   void step() {
     float choice = random(1); //<>//
-    float stepSize = (float)generator.nextGaussian();
     
     if (choice < 0.4) {
       x++;
